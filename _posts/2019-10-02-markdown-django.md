@@ -101,7 +101,7 @@ MARKDOWN_DEUX_STYLES = {
 
 ---
 
-마크다운 에디터는 `simpleMDE`를 추천한다. 위지윅([WYSIWYG](https://ko.wikipedia.org/wiki/%EC%9C%84%EC%A7%80%EC%9C%84%EA%B7%B8)) 방식을 채택하여 사용자 입장에서 편리하다.
+마크다운 에디터는 [simpleMDE](https://github.com/sparksuite/simplemde-markdown-editor)를 추천한다. 위지윅([WYSIWYG](https://ko.wikipedia.org/wiki/%EC%9C%84%EC%A7%80%EC%9C%84%EA%B7%B8)) 방식을 채택하여 사용자 입장에서 편리하다.
 ![image](https://camo.githubusercontent.com/dd1a40dd1efd202fd3862995b3ecc699282ee540/687474703a2f2f692e696d6775722e636f6d2f7a7157664a774f2e706e67) 
 마크다운을 입력하는 즉시 스타일이 적용되서, 직관적이다.
 
@@ -141,6 +141,7 @@ simplemde.value("This text will appear in the editor");
 ```
 
 ## 4) Customize
+[simpleMDE](https://github.com/sparksuite/simplemde-markdown-editor)를 참고하면 된다.
 ---
 
 위 두 가지 라이브러리를 사용하면 Markdown 렌더링부터 에디터까지 빠르게 구현이 가능하다.
