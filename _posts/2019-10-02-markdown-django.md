@@ -25,10 +25,10 @@ settings.py의 `INSTALLED_APP`에 `markdown_deux`를 추가한다.
 
 ## 3) usage
 markdown_deux는 settings.py에서 style을 설정할 수 있다.
+
 ### markdown 템플릿 필터
 ```
 {% raw %}
-
 {% load markdown_deux_tags %}
 ...
 {{ myvar|markdown:"STYLE" }}      {# convert `myvar` to HTML using the "STYLE" style #}
@@ -47,9 +47,98 @@ text here.
 ```
 
 ### markdown_cheatsheet
+`cheatsheet`태그를 사용하면 템플릿에 마크다운 미리보기를 모두 출력한다. 프론트엔드 디자인 시 유용하게 사용할 수 있다.
 ```
 {% raw %}
 {% markdown_cheatsheet %}
 {% endraw %}
 ```
+
+### extension
+`settings.py`에서 아래를 참고하여 여러가지 customize가 가능하다. 
+```
+# settings.py
+from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
+
+MARKDOWN_DEUX_STYLES = {
+    "default": MARKDOWN_DEUX_DEFAULT_STYLE,
+    "trusted": {
+        "extras": {
+            "code-friendly": None,
+        },
+        # Allow raw HTML (WARNING: don't use this for user-generated
+        # Markdown for your site!).
+        "safe_mode": False,
+    }
+    # Here is what http://code.activestate.com/recipes/ currently uses.
+    "recipe": {
+        "extras": {
+            "code-friendly": None,
+        },
+        "safe_mode": "escape",
+        "link_patterns": [
+            # Transform "Recipe 123" in a link.
+            (re.compile(r"recipe\s+#?(\d+)\b", re.I),
+             r"http://code.activestate.com/recipes/\1/"),
+        ],
+        "extras": {
+            "code-friendly": None,
+            "pyshell": None,
+            "demote-headers": 3,
+            "link-patterns": None,
+            # `class` attribute put on `pre` tags to enable using
+            # <http://code.google.com/p/google-code-prettify/> for syntax
+            # highlighting.
+            "html-classes": {"pre": "prettyprint"},
+            "cuddled-lists": None,
+            "footnotes": None,
+            "header-ids": None,
+        },
+        "safe_mode": "escape",
+    }
+}
+```
+
+---
+
+마크다운 에디터는 `simpleMDE`를 추천한다. 위지윅([WYSIWYG](https://ko.wikipedia.org/wiki/%EC%9C%84%EC%A7%80%EC%9C%84%EA%B7%B8)) 방식을 채택하여 사용자 입장에서 편리하다.
+![image](https://camo.githubusercontent.com/dd1a40dd1efd202fd3862995b3ecc699282ee540/687474703a2f2f692e696d6775722e636f6d2f7a7157664a774f2e706e67) 
+마크다운을 입력하는 즉시 스타일이 적용되서, 직관적이다.
+
+## simpleMDE
+설치 방법에는 여러가지가 있다.
+
+npm
+```
+npm install simplemde --save
+```
+
+bower
+```
+bower install simplemde --save
+```
+
+jsDeliver
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+```
+
+### Using
+Textarea의 ID를 사용하면 된다.
+```javascript
+<script>
+var simplemde = new SimpleMDE({ element: document.getElementById("MyID") });
+</script>
+```
+### Value
+`Javascript`상에서 Textarea의 값을 설정하거나 불러올 수 있다.
+```javascript
+simplemde.value();
+simplemde.value("This text will appear in the editor");
+```
+
+---
+
+위 두 가지 라이브러리를 사용하면 Markdown 렌더링부터 에디터까지 빠르게 구현이 가능하다.
 
