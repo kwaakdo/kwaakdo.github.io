@@ -56,7 +56,7 @@ text here.
 
 ### extension
 `settings.py`에서 아래를 참고하여 여러가지 customize가 가능하다. 
-```
+```python
 # settings.py
 from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
 
