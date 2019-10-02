@@ -1,5 +1,6 @@
 ---
-title: Django에서의 Markdown 렌더링과 Markdown 에디터tags: Django Python Website Markdown
+title: Django에서의 Markdown 렌더링과 Markdown 에디터
+tags: Django Python Website Markdown
 aside:
   toc: true
 ---
