@@ -4,7 +4,7 @@ tags: Django Python Website Markdown
 ---
 
 
-장고에서 사용할 수 있는 마크다운 라이브러리에는 [Django Markup](https://pypi.org/project/django-markup/), [Markdown_Deux](https://github.com/trentm/django-markdown-deux) 등등이 존재한다. 개인적으로 markdown_deux의 document가 깔끔하게 만들어져있고, `settings.py`에서의 커스터마이징이 자유롭다고 생각하기 때문에 markdown_deux를 채택했다.
+장고에서 사용할 수 있는 마크다운 라이브러리에는 [Django Markup](https://pypi.org/project/django-markup/), [Markdown_Deux](https://github.com/trentm/django-markdown-deux) 등등이 있다. 경험에 의하면 markdown_deux의 document가 깔끔하게 만들어져있고, `settings.py`에서의 커스터마이징이 자유롭다고 생각하기 때문에 markdown_deux를 채택했다.
 
 <!--more-->
 
@@ -108,7 +108,7 @@ MARKDOWN_DEUX_STYLES = {
 # simpleMDE
 설치 방법에는 여러가지가 있다.
 
-## 1) installation
+## 1) Installation
 ### npm
 ```sh
 npm install simplemde --save
