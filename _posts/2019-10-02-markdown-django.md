@@ -1,6 +1,7 @@
 ---
 title: Django에서의 Markdown 렌더링과 Markdown 에디터
 tags: Django Python Website Markdown
+comments: true
 ---
 
 
