@@ -14,16 +14,16 @@ tags: Django Python Website Markdown
 
 # markdown_deux
 `markdown_deux`는 [python_markdown2](https://github.com/trentm/python-markdown2)을 기반으로 한다. 
-## 1) installation
+## 1) Installation
 pypi로 최신버전을 설치한다.
 ```
 pip install django-markdown-deux
 ```
 
-## 2) set up
+## 2) Set up
 settings.py의 `INSTALLED_APP`에 `markdown_deux`를 추가한다.
 
-## 3) usage
+## 3) Usage
 markdown_deux는 settings.py에서 style을 설정할 수 있다.
 
 ### markdown 템플릿 필터
@@ -105,39 +105,42 @@ MARKDOWN_DEUX_STYLES = {
 ![image](https://camo.githubusercontent.com/dd1a40dd1efd202fd3862995b3ecc699282ee540/687474703a2f2f692e696d6775722e636f6d2f7a7157664a774f2e706e67) 
 마크다운을 입력하는 즉시 스타일이 적용되서, 직관적이다.
 
-## simpleMDE
+# simpleMDE
 설치 방법에는 여러가지가 있다.
 
-npm
+## 1) installation
+### npm
 ```
 npm install simplemde --save
 ```
 
-bower
+### bower
 ```
 bower install simplemde --save
 ```
 
-jsDeliver
+### jsDeliver
 ```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 ```
 
-### Using
+## 2) Using
 Textarea의 ID를 사용하면 된다.
 ```javascript
 <script>
 var simplemde = new SimpleMDE({ element: document.getElementById("MyID") });
 </script>
 ```
-### Value
+
+## 3) Value
 `Javascript`상에서 Textarea의 값을 설정하거나 불러올 수 있다.
 ```javascript
 simplemde.value();
 simplemde.value("This text will appear in the editor");
 ```
 
+## 4) Customize
 ---
 
 위 두 가지 라이브러리를 사용하면 Markdown 렌더링부터 에디터까지 빠르게 구현이 가능하다.
