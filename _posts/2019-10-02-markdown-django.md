@@ -110,17 +110,17 @@ MARKDOWN_DEUX_STYLES = {
 
 ## 1) installation
 ### npm
-```
+```sh
 npm install simplemde --save
 ```
 
 ### bower
-```
+```sh
 bower install simplemde --save
 ```
 
 ### jsDeliver
-```
+```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 ```
