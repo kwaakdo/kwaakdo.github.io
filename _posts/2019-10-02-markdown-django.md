@@ -125,7 +125,7 @@ bower install simplemde --save
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 ```
 
-## 2) Using
+## 2) Usage
 Textarea의 ID를 사용하면 된다.
 ```javascript
 <script>
