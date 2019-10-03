@@ -44,7 +44,7 @@ from keras.layers import Dense
 ...
 ```
 
-위 숫자들이 의미하는 것은 8개의 input과 1개의 output이다. 한 row당 좌측 8개는 Feature이고 우측 1개는 당뇨병의 양성, 음성을 나타낸다.
+위 숫자들이 의미하는 것은 8개의 input과 1개의 output이다. 한 row당 좌측 8개는 Feature이고 우측 1개는 당뇨병의 양성, 음성을 나타낸다. 아래는 데이터셋의 세부적인 내용이다.
 
 **Input Variables(X) :**
 1. 임신 횟수
@@ -59,7 +59,7 @@ from keras.layers import Dense
 **Output Variables(y) :**
 1. 양성, 음성 (0 or 1)
 
-NumPy는 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 지원한다. loadtxt로 데이터셋을 불러오고나서, Input과 Output을 분리하기 위해 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)처리를 해준다. 
+NumPy는 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 지원한다. loadtxt로 데이터셋을 불러오고나서, 같은 Row에 있는 Input과 Output을 분리하기 위해 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)처리를 해준다. 
 ```python
 dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
 
