@@ -115,4 +115,4 @@ python manage.py runserver
 
 
 
-#### 참고 : [https://vsupalov.com/cookiecutter-django-quickstart/](https://vsupalov.com/cookiecutter-django-quickstart/)
+> 참고 : [https://vsupalov.com/cookiecutter-django-quickstart/](https://vsupalov.com/cookiecutter-django-quickstart/)
