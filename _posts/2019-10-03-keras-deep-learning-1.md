@@ -26,7 +26,7 @@ from keras.layers import Dense
 ```
 `imports`를 마쳤다면 이제 데이터를 불러올 수 있다.
 
-데이터셋으로 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 피마 인디언 데이터셋은 [Binary Classification Problem](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 음성, 양성이 1과 0으로 표현되어 있으며 5년간의 당뇨병 의료 기록이 저장되어있다.
+이 강좌에서는 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 피마 인디언 데이터셋은 [Binary Classification Problem](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 음성, 양성이 1과 0으로 표현되어 있으며 5년간의 당뇨병 의료 기록이 저장되어있다.
 
 데이터셋
 : [CSV FILE](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
@@ -84,7 +84,12 @@ array([[  6.   , 148.   ,  72.   , ...,  33.6  ,   0.627,  50.   ],
 ```
 
 ## 2) 케라스 모델 만들기
+Dense 레이어를 사용하여 다층 퍼셉트론 모델을 만들 수 있다.
+- 속성이 8개이기 때문에, 입력 뉴런도 8개이다.
+- 첫번째 hidden layer는 12개의 노드를 가지고 있으며 [ReLu Activation Function](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)를 사용한다.
+- 두번째 hidden layer는 8개의 노드를 가지고 있으며 [ReLu Activation Function](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)를 사용한다.
+- 세번째 output layer는 한개의 노드이며 [Sigmoid Activation Function](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)을 사용한다.
 
-작성중인 글입니다.
+
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
