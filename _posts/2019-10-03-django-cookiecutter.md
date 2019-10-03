@@ -5,7 +5,7 @@ tags: Django Python Website
 
 ![image](https://raw.github.com/audreyr/cookiecutter/3ac078356adf5a1a72042dfe72ebfa4a9cd5ef38/logo/cookiecutter_medium.png)
 
-장고는 간편하지만 프로젝트를 시작할 때 마다 초기 설정에 너무 많은 시간을 쓰게 된다. 그리고 초보자들에게는 그 설정조차 난해할 수 있다. [Django CookieCutter](https://github.com/pydanny/cookiecutter-django)는 이와 같은 불편함을 덜어주기 위한 프레임워크이다. 
+장고는 간편하지만 프로젝트를 시작할 때 마다 초기 설정에 너무 많은 시간을 쓰게 된다. 그리고 초보자들에게는 그 설정조차 난해할 수 있다. [Django CookieCutter](https://github.com/pydanny/cookiecutter-django)는 이와 같은 불편함을 덜어주기 위한 프레임워크이다. 생성부터 배포까지의 과정을 이 라이브러리가 처리해준다.
 
 <!--more-->
 # Django CookieCutter
