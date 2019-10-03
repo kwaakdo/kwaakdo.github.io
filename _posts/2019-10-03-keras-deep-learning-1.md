@@ -96,18 +96,32 @@ model.add(Dense(12, input_dim=8, activation='relu'))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 ```
-> **Note.** 헷갈리기 쉬운 것은, 첫번째 Dense 레이어의 역할이다. 첫번째 Dense 레이어의 역할은 input 레이어와 첫번째 hidden layer 이 두가지다.
+> **Note.** 헷갈리기 쉬운 것은, 첫번째 Dense 레이어의 역할이다. 첫번째 Dense 레이어의 역할은 input 레이어와 첫번째 hidden layer 이 두 가지의 역할을 한다.
 
 ## 3) 케라스 모델 학습과정 설정하기
 케라스를 정의하였으면 손실함수(Loss Functions)와 최적화(Optimizer) 알고리즘을 설정해야 한다.
 - 손실함수로는  [Binary Classification Problem](https://en.wikipedia.org/wiki/Binary_classification)이기 때문에,[Binary_Cross Entropy](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a)를 사용한다. 
 - 최적화 알고리즘으로는 [Adam](https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c)을 사용한다. [Adam](https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c)은 학습률을 줄여나가고 속도를 계산하여 학습의 갱신강도를 적응적으로 조정해나가는 방법이다.
-- metric는 평가척도를 나타낸다. 일반적으로 `Accuracy`를 사용한다.
+- metric는 평가척도를 나타낸다. 일반적으로 `accuracy`를 사용한다.
 ```python
 ...
 # compile the keras model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 ...
 ```
+
+## 4) 케라스 모델 학습시키기
+**fit()** 함수를 호출함으로써 모델을 학습시킬 수 있다. 첫번째 인자는 input이고, 두번째 인자는 output이다.
+Epoch
+: 학습 반복 횟수이다. 여기서는 150회로 지정해보겠다.
+Batch
+: 가중치를 업데이트할 배치 크기이다. 10으로 지정해보겠다.
+```python
+...
+# fit the keras model on the dataset
+model.fit(X, y, epochs=150, batch_size=10)
+...
+```
+
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
