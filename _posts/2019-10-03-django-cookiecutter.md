@@ -29,7 +29,8 @@ tags: Django Python Website
 * Customizable PostgreSQL version
 
 ## 2) 요구사항
-1. Python 3이 설치되어 있어야 한다.
+1. [Python 3](https://www.python.org/downloads/)이 설치되어 있어야 한다.
+2. [pipenv](https://pypi.org/project/pipenv/)가 설치되어 있어야 한다.
 
 ## 3) 설치
 ```sh
