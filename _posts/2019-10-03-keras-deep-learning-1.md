@@ -83,7 +83,7 @@ array([[  6.   , 148.   ,  72.   , ...,  33.6  ,   0.627,  50.   ],
        [  1.   ,  93.   ,  70.   , ...,  30.4  ,   0.315,  23.   ]])
 ```
 
-## 2) 케라스 모델 만들기
+## 2) 케라스 모델 정의하기
 Dense 레이어를 사용하여 다층 퍼셉트론 모델을 만들 수 있다.
 - 속성이 8개이기 때문에, 입력 뉴런도 8개이다.
 - 첫번째 hidden layer는 12개의 노드를 가지고 있으며 [ReLu Activation Function](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)를 사용한다.
@@ -97,5 +97,8 @@ model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 ```
 > **Note.** 헷갈리기 쉬운 것은, 첫번째 Dense 레이어의 역할이다. 첫번째 Dense 레이어의 역할은 input 레이어와 첫번째 hidden layer 이 두가지다.
+
+## 3) 케라스 모델 학습과정 설정하기
+
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
