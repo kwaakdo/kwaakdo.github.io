@@ -2,7 +2,7 @@
 title: Deep Learning Tutorial With Keras
 tags: DeepLearning AI Python
 ---
-![image](https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png)
+<img class="image image--md" src="https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png"/>
 [Keras](https://keras.io/)는 딥 러닝 모델을 개발할 수 있는 쉽고 강력한 파이썬 오픈소스 라이브러리다. 효율적인 라이브러리인 [Theano](https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/)와 [Tensorflow](https://machinelearningmastery.com/introduction-python-deep-learning-library-tensorflow/)를 활용하면 몇 줄의 코드만으로도 뉴럴 네트워크 모델을 만들고 학습시킬 수 있다.
 
 이번 강좌를 통해 Keras를 활용하여 딥러닝 뉴럴 네트워크를 만드는 방법에 대해 알아볼것이다.
@@ -63,7 +63,7 @@ dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
 X = dataset[:,0:8]
 y = dataset[:,8]
 ```
-[Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 하게 되면 좌측 8개의 Variables와 우측 1개의 Variables가 각각 X, y에 입력된 걸 알 수 있다.
+[Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 하게 되면 좌측 8개의 Input Variables와 우측 1개의 Output Variables가 각각 X, y에 분리되어 저장된 것을 알 수 있다.
 
 *input:*
 ```python
@@ -79,6 +79,7 @@ array([[  6.   , 148.   ,  72.   , ...,  33.6  ,   0.627,  50.   ],
        [  1.   , 126.   ,  60.   , ...,  30.1  ,   0.349,  47.   ],
        [  1.   ,  93.   ,  70.   , ...,  30.4  ,   0.315,  23.   ]])
 ```
+
 
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
