@@ -1,11 +1,21 @@
 ---
-title: Deep Learning Tutorial With Keras - (0)
+title: Deep Learning Tutorial With Keras
 tags: DeepLearning AI Python
 ---
 
-[딥 러닝](https://en.wikipedia.org/wiki/Deep_learning)은 인간의 두뇌 작용을 모방하여 만들어졌다. 
+[Keras](https://keras.io/)는 딥 러닝 모델을 개발할 수 있는 쉽고 강력한 파이썬 오픈소스 라이브러리다. 효율적인 라이브러리인 [Theano](https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/)와 [Tensorflow](https://machinelearningmastery.com/introduction-python-deep-learning-library-tensorflow/)를 활용하면 몇 줄의 코드만으로도 뉴럴 네트워크 모델을 만들고 학습시킬 수 있다.
+
+이번 강좌를 통해 Keras를 활용하여 딥러닝 뉴럴 네트워크를 만드는 방법에 대해 알아볼것이다.
 
 <!--more-->
+---
+## 요구사항
+1. Python 2 혹은 3이 설치되어 있어야 한다.
+2. SciPy(NumPy 포함)이 설치되어 있어야 한다.
+3. Keras와 backend(Theano 혹은 Tensorflow)가 설치되어 있어야 한다.
+
+---
+# 1) 데이터 불러오기
 
 
-> 참고 [Keras Tutorial](https://elitedatascience.com/keras-tutorial-deep-learning-in-python)
+> 참고 [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
