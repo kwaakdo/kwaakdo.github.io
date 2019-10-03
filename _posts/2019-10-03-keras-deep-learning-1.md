@@ -8,6 +8,8 @@ tags: DeepLearning AI Python
 이번 강좌를 통해 Keras를 활용하여 딥러닝 뉴럴 네트워크를 만드는 방법에 대해 알아볼것이다.
 
 <!--more-->
+# Keras
+
 ---
 ## 요구사항
 1. Python 2 혹은 3이 설치되어 있어야 한다.
@@ -15,7 +17,7 @@ tags: DeepLearning AI Python
 3. Keras와 backend(Theano 혹은 Tensorflow)가 설치되어 있어야 한다.
 
 ---
-# 1) 데이터 불러오기
+## 1) 데이터 불러오기
 첫번째로, 함수와 클래스를 정의해야 한다. [NumPy](https://www.numpy.org/)를 활용하여 데이터를 불러오고 [Keras](https://keras.io/)의 두가지 클래스를 `import`할 것이다.
 
 ```python
