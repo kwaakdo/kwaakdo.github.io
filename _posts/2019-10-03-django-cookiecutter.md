@@ -1,5 +1,5 @@
 ---
-title: 5분만에 Django CookieCutter을 활용한 쉽고 빠른 프로젝트 만들기
+title: 5분만에 Django 프로젝트 만들기 - Django CookieCutter
 tags: Django Python Website
 ---
 ![image](https://raw.github.com/audreyr/cookiecutter/3ac078356adf5a1a72042dfe72ebfa4a9cd5ef38/logo/cookiecutter_medium.png)
