@@ -27,9 +27,10 @@ from keras.layers import Dense
 
 이 튜토리얼에서는 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 데이터셋에는 5년간의 당뇨병 의료 기록이 저장되어있다.
 
-[Binary Classification](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 유, 무가 1과 0으로 표현되어 있다.
+현재 Problem은 [Binary Classification](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 음성, 양성이 1과 0으로 표현되어 있다.
 
 데이터셋 : [CSV FILE](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
+
 데이터셋 정보 : [DETAILS](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
 
 데이터셋을 `pima-indians-diabetes.csv`로 저장한다.
@@ -61,18 +62,18 @@ Output Variables(y) :
 
 NumPy는 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 지원한다. loadtxt로 데이터셋을 불러오고나서, Input과 Output을 분리하기 위해 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)처리를 해준다. 
 ```python
-
 dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
 
 X = dataset[:,0:8]
 y = dataset[:,8]
 ```
 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 하게 되면 좌측 8개의 Variables와 우측 1개의 Variables가 각각 X, y에 입력된 걸 알 수 있다.
-input:
+
+*input:*
 ```python
 X
 ```
-output:
+*output:*
 ```
 array([[  6.   , 148.   ,  72.   , ...,  33.6  ,   0.627,  50.   ],
        [  1.   ,  85.   ,  66.   , ...,  26.6  ,   0.351,  31.   ],
