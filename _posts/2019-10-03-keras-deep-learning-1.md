@@ -111,7 +111,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ```
 
 ## 4) 케라스 모델 학습시키기
-**fit()** 함수를 호출함으로써 모델을 학습시킬 수 있다. 첫번째 인자는 input이고, 두번째 인자는 output이다.
+`fit()` 함수를 호출함으로써 모델을 학습시킬 수 있다. 첫번째 인자는 input이고, 두번째 인자는 output이다.
 Epoch
 : 학습 반복 횟수이다. 여기서는 150회로 지정해보겠다.
 
