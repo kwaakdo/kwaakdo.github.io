@@ -9,8 +9,6 @@ tags: DeepLearning AI Python
 
 <!--more-->
 # Keras
-
----
 ## 요구사항
 1. Python 2 혹은 3이 설치되어 있어야 한다.
 2. SciPy(NumPy 포함)이 설치되어 있어야 한다.
