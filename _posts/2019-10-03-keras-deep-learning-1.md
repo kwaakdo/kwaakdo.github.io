@@ -25,5 +25,39 @@ from keras.layers import Dense
 ```
 `imports`를 마쳤다면 이제 데이터를 불러올 수 있다.
 
+이 튜토리얼에서는 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 데이터셋에는 5년간의 당뇨병 의료 기록이 저장되어있다.
+
+[Binary Classification](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 유, 무가 1과 0으로 표현되어 있다.
+
+데이터셋 : [CSV FILE](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
+데이터셋 정보 : [DETAILS](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
+
+데이터셋을 `pima-indians-diabetes.csv`로 저장한다.
+
+데이터를 보면 아래와 같다.
+```
+6,148,72,35,0,33.6,0.627,50,1
+1,85,66,29,0,26.6,0.351,31,0
+8,183,64,0,0,23.3,0.672,32,1
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+...
+```
+
+위 숫자들이 의미하는 것은 8개의 input과 1개의 output이다. 한 row당 좌측 8개는 Feature이고 우측 1개는 당뇨병의 양성, 음성을 나타낸다.
+
+Input Variables(X) :
+1. 임신 횟수
+2. 구강내 2시간 동안의 글루코오즈 잔류량 테스트
+3. 혈압 (mm Hg)
+4. 삼두박근 쪽의 피부 두께 (mm)
+5. 2시간 동안의 세륨 인슐린의 양 (mu U/ml)
+6. BMI 지수 (weight in kg/(height in m)^2)
+7. 가계 당뇨병 병력 함수
+8. 나이 (years)
+
+Output Variables(y) :
+1. 양성, 음성 (0 or 1)
+
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
