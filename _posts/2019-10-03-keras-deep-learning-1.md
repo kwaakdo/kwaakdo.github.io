@@ -98,7 +98,7 @@ model.add(Dense(1, activation='sigmoid'))
 ```
 > **Note.** 헷갈리기 쉬운 것은, 첫번째 Dense 레이어의 역할이다. 첫번째 Dense 레이어의 역할은 input 레이어와 첫번째 hidden layer 이 두 가지의 역할을 한다.
 
-## 3) 케라스 모델 학습과정 설정하기
+## 3) 학습과정 설정하기
 케라스를 정의하였으면 손실함수(Loss Functions)와 최적화(Optimizer) 알고리즘을 설정해야 한다.
 - 손실함수로는  [Binary Classification Problem](https://en.wikipedia.org/wiki/Binary_classification)이기 때문에,[Binary_Cross Entropy](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a)를 사용한다. 
 - 최적화 알고리즘으로는 [Adam](https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c)을 사용한다. [Adam](https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c)은 학습률을 줄여나가고 속도를 계산하여 학습의 갱신강도를 적응적으로 조정해나가는 방법이다.
@@ -110,7 +110,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ...
 ```
 
-## 4) 케라스 모델 학습시키기
+## 4) 학습시키기
 `fit()` 함수를 호출함으로써 모델을 학습시킬 수 있다. 첫번째 인자는 input이고, 두번째 인자는 output이다.
 
 Epoch
@@ -126,7 +126,7 @@ model.fit(X, y, epochs=150, batch_size=10)
 ```
 fit() 함수는 CPU혹은 GPU를 실행시킨다. 이 튜토리얼 정도의 작은 규모는 CPU로 충분하지만, 큰 규모의 Training은 GPU를 사용해야 한다.
 
-## 5) 케라스 모델 평가하기
+## 5) 평가하기
 `evaluate()` 함수를 사용하여, 테스트 데이터를 통해 학습한 모델에 대한 정확도를 평가할 수 있다.
 ```python
 ...
