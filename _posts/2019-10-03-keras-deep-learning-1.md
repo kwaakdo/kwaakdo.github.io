@@ -28,9 +28,11 @@ from keras.layers import Dense
 
 데이터셋으로 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 피마 인디언 데이터셋은 [Binary Classification Problem](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 음성, 양성이 1과 0으로 표현되어 있다. 5년간의 당뇨병 의료 기록이 저장되어있다.
 
-데이터셋 : [CSV FILE](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
+데이터셋
+: [CSV FILE](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
 
-데이터셋 정보 : [DETAILS](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
+데이터셋 정보
+: [DETAILS](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
 
 데이터셋을 `pima-indians-diabetes.csv`로 저장한다. 데이터셋을 살펴보면 아래와 같은 숫자들이 보인다.
 ```
