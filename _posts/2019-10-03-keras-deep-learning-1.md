@@ -112,6 +112,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 
 ## 4) 케라스 모델 학습시키기
 `fit()` 함수를 호출함으로써 모델을 학습시킬 수 있다. 첫번째 인자는 input이고, 두번째 인자는 output이다.
+
 Epoch
 : 학습 반복 횟수이다. 여기서는 150회로 지정해보겠다.
 
@@ -124,6 +125,15 @@ model.fit(X, y, epochs=150, batch_size=10)
 ...
 ```
 fit() 함수는 CPU혹은 GPU를 실행시킨다. 이 튜토리얼 정도의 작은 규모는 CPU로 충분하지만, 큰 규모의 Training은 GPU를 사용해야 한다.
+
+## 5) 케라스 모델 평가하기
+`evaluate()` 함수를 사용하여, 테스트 데이터를 통해 학습한 모델에 대한 정확도를 평가할 수 있다.
+```python
+...
+# evaluate the keras model
+_, accuracy = model.evaluate(X, y)
+print('Accuracy: %.2f' % (accuracy*100))
+```
 
 
 
