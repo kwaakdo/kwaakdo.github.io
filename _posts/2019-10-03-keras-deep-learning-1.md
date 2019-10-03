@@ -90,6 +90,6 @@ Dense 레이어를 사용하여 다층 퍼셉트론 모델을 만들 수 있다.
 - 두번째 hidden layer는 8개의 노드를 가지고 있으며 [ReLu Activation Function](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)를 사용한다.
 - 세번째 output layer는 한개의 노드이며 [Sigmoid Activation Function](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)을 사용한다.
 
-
+> Note. 헷갈리기 쉬운 것은, 첫번째 Dense 레이어의 역할이다. 첫번째 Dense 레이어의 역할은 input 레이어와 첫번째 hidden layer 이 두가지다.
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
