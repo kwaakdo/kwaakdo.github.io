@@ -8,7 +8,7 @@ tags: Django Python Website Markdown
 
 <!--more-->
 
-물론, Github Flavored Markdown도 있지만 API 요청의 한계가 있기 때문에 사용하지 않기로 했다.
+물론, Github Flavored Markdown도 있지만 API 요청 횟수에 한계가 있기 때문에 사용하지 않기로 했다.
 
 ---
 
