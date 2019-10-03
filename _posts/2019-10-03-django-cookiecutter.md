@@ -2,7 +2,7 @@
 title: 5분만에 Django 프로젝트 만들기 - Django CookieCutter
 tags: Django Python Website
 ---
-![image](https://raw.github.com/audreyr/cookiecutter/3ac078356adf5a1a72042dfe72ebfa4a9cd5ef38/logo/cookiecutter_medium.png)
+![image](https://raw.github.com/audreyr/cookiecutter/3ac078356adf5a1a72042dfe72ebfa4a9cd5ef38/logo/cookiecutter_medium.png){: .text-center}
 
 장고는 간편하지만 프로젝트를 시작할 때 마다 초기 설정에 너무 많은 시간을 쓰게 된다. 그리고 초보자들에게는 그 설정조차 난해할 수 있다. [Django CookieCutter](https://github.com/pydanny/cookiecutter-django)는 이와 같은 불편함을 덜어주기 위한 프레임워크이다. 
 
