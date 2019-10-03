@@ -113,7 +113,7 @@ python manage.py runserver
 ```
 
 ---
-[Django CookieCutter](https://github.com/pydanny/cookiecutter-django)를 활용해 프로젝트를 생성하기까지 약 10분도 채 걸리지 않는다. 
+[Django CookieCutter](https://github.com/pydanny/cookiecutter-django)를 활용해 프로젝트를 생성하기까지 약 10분도 채 걸리지 않았다. 
 
 
 
