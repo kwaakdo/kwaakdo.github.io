@@ -114,6 +114,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 **fit()** 함수를 호출함으로써 모델을 학습시킬 수 있다. 첫번째 인자는 input이고, 두번째 인자는 output이다.
 Epoch
 : 학습 반복 횟수이다. 여기서는 150회로 지정해보겠다.
+
 Batch
 : 가중치를 업데이트할 배치 크기이다. 10으로 지정해보겠다.
 ```python
@@ -122,6 +123,8 @@ Batch
 model.fit(X, y, epochs=150, batch_size=10)
 ...
 ```
+fit() 함수는 CPU혹은 GPU를 실행시킨다. 이 튜토리얼 정도의 작은 규모는 CPU로 충분하지만, 큰 규모의 Training은 GPU를 사용해야 한다.
+
 
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
