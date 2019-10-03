@@ -2,7 +2,7 @@
 title: Deep Learning Tutorial With Keras
 tags: DeepLearning AI Python
 ---
-<div class="hero hero--center" style="background-color: #d00000;">
+<div class="hero hero--center hero--dark" style="background-color: #d00000;">
   <div class="hero__content">
     <h3>Keras</h3>
   </div>
