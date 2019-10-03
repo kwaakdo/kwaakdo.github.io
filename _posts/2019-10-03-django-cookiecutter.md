@@ -9,7 +9,7 @@ tags: Django Python Website
 <!--more-->
 # Django CookieCutter
 
-### 특징
+## 특징
 * For Django 2.2
 * Works with Python 3.6
 * Renders Django projects with 100% starting test coverage
@@ -36,7 +36,7 @@ tags: Django Python Website
 pipenv install cookiecutter
 ```
 
-## 프로젝트 생성
+### 프로젝트 생성
 ```sh
 cookiecutter https://github.com/pydanny/cookiecutter-django
 ```
@@ -93,7 +93,7 @@ keep_local_envs_in_vcs [y]: y
 debug[n]: n
 ```
 
-## 설정
+### 설정
 `local dependencies`를 설치해준다.
 ```sh
 pip install -r requirements/local.txt
