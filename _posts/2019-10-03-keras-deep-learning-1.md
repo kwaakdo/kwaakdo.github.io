@@ -25,9 +25,7 @@ from keras.layers import Dense
 ```
 `imports`를 마쳤다면 이제 데이터를 불러올 수 있다.
 
-이 튜토리얼에서는 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 데이터셋에는 5년간의 당뇨병 의료 기록이 저장되어있다.
-
-현재 Problem은 [Binary Classification](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 음성, 양성이 1과 0으로 표현되어 있다.
+데이터셋으로 피마 인디언 데이터셋을 사용할 것이다. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)에서 제공한다. 피마 인디언 데이터셋은 [Binary Classification Problem](https://en.wikipedia.org/wiki/Binary_classification)으로써, 당뇨병의 음성, 양성이 1과 0으로 표현되어 있다. 5년간의 당뇨병 의료 기록이 저장되어있다.
 
 데이터셋 : [CSV FILE](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
 
