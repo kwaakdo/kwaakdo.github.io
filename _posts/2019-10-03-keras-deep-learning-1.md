@@ -31,9 +31,7 @@ from keras.layers import Dense
 
 데이터셋 정보 : [DETAILS](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
 
-데이터셋을 `pima-indians-diabetes.csv`로 저장한다.
-
-데이터를 보면 아래와 같다.
+데이터셋을 `pima-indians-diabetes.csv`로 저장한다. 데이터셋을 살펴보면 아래와 같은 숫자들이 보인다.
 ```
 6,148,72,35,0,33.6,0.627,50,1
 1,85,66,29,0,26.6,0.351,31,0
