@@ -10,9 +10,9 @@ tags: DeepLearning AI Python
 <!--more-->
 # Keras
 ## 요구사항
-1. Python 2 혹은 3이 설치되어 있어야 한다.
-2. SciPy(NumPy 포함)이 설치되어 있어야 한다.
-3. Keras와 backend(Theano 혹은 Tensorflow)가 설치되어 있어야 한다.
+1. Python 2 혹은 3이 설치되어 있어야 한다. [설치하기](https://www.python.org/downloads/)[BUTTON](#){:.button.button--primary.button--pill}
+2. SciPy(NumPy 포함)이 설치되어 있어야 한다. [설치하기](https://www.scipy.org/install.html)
+3. Keras와 backend(Theano 혹은 Tensorflow)가 설치되어 있어야 한다. [설치하기](https://keras.io/#installation)
 
 ---
 ## 1) 데이터 불러오기
