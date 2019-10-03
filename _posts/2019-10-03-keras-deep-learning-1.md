@@ -134,7 +134,42 @@ fit() 함수는 CPU혹은 GPU를 실행시킨다. 이 튜토리얼 정도의 작
 _, accuracy = model.evaluate(X, y)
 print('Accuracy: %.2f' % (accuracy*100))
 ```
+![image](https://user-images.githubusercontent.com/56034782/66134204-ea969080-e632-11e9-981d-67c3377943e6.png)
 
+## 6) 전체 코드
+```python
+# first neural network with keras tutorial
+from numpy import loadtxt
+from keras.models import Sequential
+from keras.layers import Dense
+# load the dataset
+dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
+# split into input (X) and output (y) variables
+X = dataset[:,0:8]
+y = dataset[:,8]
+# define the keras model
+model = Sequential()
+model.add(Dense(12, input_dim=8, activation='relu'))
+model.add(Dense(8, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+# compile the keras model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+# fit the keras model on the dataset
+model.fit(X, y, epochs=150, batch_size=10)
+# evaluate the keras model
+_, accuracy = model.evaluate(X, y)
+print('Accuracy: %.2f' % (accuracy*100))
+```
+
+## 7) 예측 해보기
+단순하게 `predict()`를 모델에 사용하면, 예측을 해볼 수 있다.
+```python
+# make class predictions with the model
+predictions = model.predict_classes(X)
+# 5번째 까지만 출력해본다.
+for i in range(5):
+	print('%s => %d (예측된 결과 %d)' % (X[i].tolist(), predictions[i], y[i]))
+```
 
 
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
