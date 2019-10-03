@@ -9,7 +9,7 @@ tags: Django Python Website
 <!--more-->
 # Django CookieCutter
 
-## 특징
+## 1) 특징
 * For Django 2.2
 * Works with Python 3.6
 * Renders Django projects with 100% starting test coverage
@@ -28,10 +28,10 @@ tags: Django Python Website
 * Run tests with unittest or pytest
 * Customizable PostgreSQL version
 
-## 요구사항
+## 2) 요구사항
 1. Python 3이 설치되어 있어야 한다.
 
-## 설치
+## 3) 설치
 ```sh
 pipenv install cookiecutter
 ```
@@ -103,7 +103,7 @@ Django는 기본적으로 `SQLite`를 사용한다, 만약 PostgreSQL같은 DB�
 export DATABASE_URL="sqlite:///db.sqlite"
 ```
 
-## 실행
+## 4) 실행
 ```sh
 python manage.py migrate
 python manage.py createsuperuser
