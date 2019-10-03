@@ -16,7 +16,7 @@ tags: DeepLearning AI Python
 
 ---
 ## 1) 데이터 불러오기
-첫번째로, 함수와 클래스를 정의해야 한다. [NumPy](https://www.numpy.org/)를 활용하여 데이터를 불러오고 [Keras](https://keras.io/)의 두가지 클래스를 `import`할 것이다.
+첫번째로, 함수와 클래스를 정의해야 한다. [NumPy](https://www.numpy.org/)를 활용하여 데이터를 불러오고 [Keras](https://keras.io/)의 Sequential 과 Dense를 `import`할 것이다.
 
 ```python
 from numpy import loadtxt
@@ -24,5 +24,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 ```
 
+
+작성중 ... 군대에서 짬짬히 작성중 ...
 
 > 참고 [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
