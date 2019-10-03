@@ -59,5 +59,29 @@ Input Variables(X) :
 Output Variables(y) :
 1. 양성, 음성 (0 or 1)
 
-<div class="input"><div class="kaggle_cell_left"><div class="CellLeft_Body-sc-vfcvyc fKKcxF"><div class="CellLeft_CodeCellPrompt-sc-1la2jj3 jpslTP">In[2]:</div></div></div><div class="prompt input_prompt"><bdi>In</bdi>&nbsp;[2]:</div><div class="inner_cell"><div class="ctb_hideshow"><div class="celltoolbar"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 51.9844px; left: 645.031px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="bottom: 0px;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="right: 0px; left: 0px; display: block;"><div style="height: 100%; min-height: 1px; width: 784px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 772.203px; padding-right: 0px; padding-bottom: 6px; margin-bottom: -6px; border-right-width: 24px; min-height: 144px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>6</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 636.641px; top: 40px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: 0px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: 0px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># load the dataset</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: 0px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">dataset</span> <span class="cm-operator">=</span> <span class="cm-variable">loadtxt</span>(<span class="cm-string">'/kaggle/input/pimaindiansdiabetescsv/pima-indians-diabetes.csv'</span>, <span class="cm-variable">delimiter</span><span class="cm-operator">=</span><span class="cm-string">','</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: 0px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># split into input (X) and output (y) variables</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: 0px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">X</span> <span class="cm-operator">=</span> <span class="cm-variable">dataset</span>[:,<span class="cm-number">0</span>:<span class="cm-number">8</span>]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: 0px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-variable">dataset</span>[:,<span class="cm-number">8</span>]</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 24px; width: 1px; border-bottom: 6px solid transparent; top: 144px;"></div><div class="CodeMirror-gutters" style="left: 0px; height: 174px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 33px;"></div></div></div></div></div></div></div>
+NumPy는 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 지원한다. loadtxt로 데이터셋을 불러오고나서, Input과 Output을 분리하기 위해 [Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)처리를 해준다. 
+```python
+
+dataset = loadtxt('pima-indians-diabetes.csv', delimiter=',')
+
+X = dataset[:,0:8]
+y = dataset[:,8]
+```
+[Slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html)을 하게 되면 좌측 8개의 Variables와 우측 1개의 Variables가 각각 X, y에 입력된 걸 알 수 있다.
+input:
+```python
+X
+```
+output:
+```
+array([[  6.   , 148.   ,  72.   , ...,  33.6  ,   0.627,  50.   ],
+       [  1.   ,  85.   ,  66.   , ...,  26.6  ,   0.351,  31.   ],
+       [  8.   , 183.   ,  64.   , ...,  23.3  ,   0.672,  32.   ],
+       ...,
+       [  5.   , 121.   ,  72.   , ...,  26.2  ,   0.245,  30.   ],
+       [  1.   , 126.   ,  60.   , ...,  30.1  ,   0.349,  47.   ],
+       [  1.   ,  93.   ,  70.   , ...,  30.4  ,   0.315,  23.   ]])
+```
+
+
 > 참고 : [Your First Deep Learning Project in Python with Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
