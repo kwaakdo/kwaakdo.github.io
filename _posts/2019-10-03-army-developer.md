@@ -26,7 +26,7 @@ tags: Living Army
 사이버 지식 정보방은 위에서 언급하였듯이 환경이 계속 초기화된다. 그리고 초기화 되는 상태가 Chrome 구 버전, 파이어폭스 구 버전이다. 켤 때마다 업데이트를 해줘야한다.
 
 ## 군대에서의 설치형 IDE와 클라우드 IDE
-설치형 IDE를 사용하고 싶지만, 사지방에 올때마다 계속 설치해줘야한다. 꽤 오래걸렸던거로 기억한다. 그래서 선택한것이 [Goorm Cloud IDE](https://ide.goorm.io/)다. 이전에 [Amazon C9](https://aws.amazon.com/ko/cloud9/)도 사용해보고 [Coder](https://coder.com/)도 사용해보았다. C9같은 경우에 로컬 서버 호스팅에 문제가 생겨서 한 일주일 정도 사용하고 바로 삭제했었다. 구름 IDE보다는 손이 많이 갔던 것 같다. 그리고 Coder는 사용 방식이 좀 다른데, 서버는 AWS에서 만들고 거기에 Coder을 실행시키면 서버가 실행되면서 VSCODE를 웹 상에서 사용할 수 있다. 좀 신박했었는데 문제가 생길때마다 AWS를 키거나 SSH로 접속해서 수정해주고 다시 Coder를 실행시키는 번거로움이 있었다. 결국에 [Goorm Cloud IDE](https://ide.goorm.io/) 프리티어를 사용하고있다. [Goorm Cloud IDE](https://ide.goorm.io/)를 활용해서 Django 프로젝트도 만들고 이 블로그 포스팅도 하고 있다. 
+설치형 IDE를 사용하고 싶지만, 사지방에 올때마다 계속 설치해줘야한다. 꽤 오래걸리는 과정으로 기억한다. 그래서 선택한것이 [Goorm Cloud IDE](https://ide.goorm.io/)다. 이전에 [Amazon C9](https://aws.amazon.com/ko/cloud9/)도 사용해보고 [Coder](https://coder.com/)도 사용해보았다. C9같은 경우에 로컬 서버 호스팅에 문제가 생겨서 한 일주일 정도 사용하고 바로 삭제했었다. 구름 IDE보다는 손이 많이 갔던 것 같다. 그리고 Coder는 사용 방식이 좀 다른데, 서버는 AWS에서 만들고 거기에 Coder을 실행시키면 서버가 실행되면서 VSCODE를 웹 상에서 사용할 수 있다. 좀 신박했었는데 문제가 생길때마다 AWS를 키거나 SSH로 접속해서 수정해주고 다시 Coder를 실행시키는 번거로움이 있었다. 결국에 [Goorm Cloud IDE](https://ide.goorm.io/) 프리티어를 사용하고있다. [Goorm Cloud IDE](https://ide.goorm.io/)를 활용해서 Django 프로젝트도 만들고 이 블로그 포스팅도 하고 있다. 
 
 ## 개발
 파이썬이나 C도 보통은 [Goorm Cloud IDE](https://ide.goorm.io/)에서 실행한다. 요새는 [Kaggle](https://www.kaggle.com/)에서 파이썬 코딩을 하고 있는데, GPU까지 무료로 사용가능하니 딥 러닝 개발에 있어서 꽤 괜찮은 것 같다. 좀 더 심화된 개발을 하게 되면 AWS서버를 하나 장만하고 거기에 주피터 노트북을 돌리는 방식으로 바꿔볼까 싶다.
