@@ -1,5 +1,5 @@
 ---
-title: 케라스 딥 러닝부터 예측까지 입문
+title: 처음하는 케라스로 딥 러닝과 예측하기
 tags: DeepLearning AI Python
 ---
 ![image](https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png)
