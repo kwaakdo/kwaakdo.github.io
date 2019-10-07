@@ -16,4 +16,4 @@ tags: DeepLearning AI Python
 </div>
 ---
 # Deep Learning
-딥 러닝이란 Big Data를 입력받아
+딥 러닝이란 Big Data를 입력받아 [Neural Net](https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%8B%A0%EA%B2%BD%EB%A7%9D)구조를 사용하여 학습하는 프로그램이다. 학습을 통해 분류 및 예측을 하는 목적이 있다.
