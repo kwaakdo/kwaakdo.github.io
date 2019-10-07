@@ -1,0 +1,18 @@
+---
+title: Keras를 활용한 Deep Learning 입문 - 1
+tags: DeepLearning AI Python
+---
+케라스는 파이썬으로 작성된 오픈소스 신경망 라이브러리이다. 빠른 실험이 가능하게끔 구현되어 있으며, 최소한의 모듈 방식의 확장성을 초점으로 두었다. 이 문서는 Udemy의 한 [Course](https://www.udemy.com/course/keras-deep-learning/)를 기초로 하는 강의 노트이다.
+
+<!--more-->
+
+<div class="card">
+  <div class="card__content">
+    <div class="card__header">
+      <h4>참고사항</h4>
+    </div>
+    <p>이 프로젝트는 Udemy의 Keras를 활용한 Deep Learning 입문을 기초하여 만들어진 강의 노트입니다.</p>
+  </div>
+</div>
+---
+# Deep Learning
