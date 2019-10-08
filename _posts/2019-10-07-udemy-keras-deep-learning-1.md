@@ -17,7 +17,18 @@ tags: DeepLearning AI Python
 
 ```mermaid
 graph LR;
-    Input --> id1[Hidden Layer] -->  Output;
+	Input --> id1[Hidden Layer] -->  Output;
+```
+
+```mermaid
+graph TB;
+    A[Do you have a problem in your life?]
+    B[Then don't worry]
+    C[Can you do something about it?]
+    A--no-->B;
+    A--yes-->C;
+    C--no-->B;
+    C--yes-->B;
 ```
 
 그리고 아래는 인공 신경망중의 하나인 퍼셉트론이다.
