@@ -23,12 +23,12 @@ graph LR;
 그리고 아래는 인공 신경망중의 하나인 퍼셉트론이다.
 
 ```mermaid
-graph LR
-    Input --> id1
-    subgraph Hidden Layer
-        id1[Linear Function] --> id2[Activation Function]
-    end
-   id2 --> Output
+graph LR;
+    Input --> id1;
+    subgraph Hidden Layer;
+        id1[Linear Function] --> id2[Activation Function];
+    end;
+   id2 --> Output;
 ```
 
 
