@@ -14,11 +14,14 @@ tags: DeepLearning AI Python
 
 ## 인공 신경망
 생물학적으로 영감을 받아 프로그래밍으로 구현했다. 하나의 신경을 그림으로 그려보면 아래와 같다. 
+
 ```mermaid
 graph LR;
     Input --> id1[Hidden Layer] -->  Output;
 ```
+
 그리고 아래는 인공 신경망중의 하나인 퍼셉트론이다.
+
 ```mermaid
 graph LR
     Input --> id1
@@ -27,5 +30,6 @@ graph LR
     end
    id2 --> Output
 ```
+
 
    
