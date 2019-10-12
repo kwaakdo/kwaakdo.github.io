@@ -2,9 +2,9 @@
 title: 케라스 창시자에게 배우는 딥 러닝 (1)
 tags: DeepLearning AI Python
 ---
-<div class="hero hero--dark" style="background-color: #123;">
+<div class="hero hero--dark" style="background-color: #d00000;">
   <div class="hero__content">
-    <h3>Hero</h3>
+    <h3>Keras</h3>
   </div>
 </div>
 
