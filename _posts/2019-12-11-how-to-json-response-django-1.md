@@ -15,12 +15,11 @@ return JsonResponse({"key": "value"})
 ```
 단순하게 위와 같이 사용해도 출력이 된다. 굳이 모델을 Json 형식으로 [Serialize](https://ko.wikipedia.org/wiki/%EC%A7%81%EB%A0%AC%ED%99%94)하는 과정을 거치지 않아도 작동한다. 
 
-반면 HttpResponse는 아래와 같이 `header` 설정에 용이하다는 장점이 있다. 대신에 기본 `header`값은 `Content-Type: text/html; charset=utf-8` 로 되어있다. 
+HttpResponse의 기본 `header`값은 `Content-Type: text/html; charset=utf-8` 로 되어있다. 아래와 같이 `content_type`을 설정해줄 수 있다.
 ```python
 return HttpResponse("Text only, please.", content_type="text/plain")
 ```
-
-JsonResponse는 기본적으로 `header`가 `Content-Type: application/json` 로 설정되어 있다.
+반면에, JsonResponse는 기본 `header`값이 `Content-Type: application/json`이다.
 
 ## 솔루션 1: HttpResponse
 ``` python
