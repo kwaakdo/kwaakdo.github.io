@@ -1,5 +1,5 @@
 ---
-title: "파이썬 크롤링 튜토리얼 - 1 : Beautiful Soup의 개념과 사용법"
+title: 파이썬 크롤링 튜토리얼 - 1 : Beautiful Soup의 개념과 사용법
 tags: Python Crawling BeautifulSoup
 ---
 ## Beautiful Soup 로 크롤링 하기
