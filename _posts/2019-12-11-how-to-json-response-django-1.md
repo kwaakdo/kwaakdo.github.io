@@ -15,21 +15,21 @@ return JsonResponse({"key": "value"})
 ```
 단순하게 위와 같이 사용해도 출력이 된다. 굳이 모델을 Json 형식으로 [Serialize](https://ko.wikipedia.org/wiki/%EC%A7%81%EB%A0%AC%ED%99%94)하는 과정을 거치지 않아도 작동한다. 
 
-반면 HttpResponse는 아래와 같이 `header` 설정에 용이하다는 장점이 있다.
+반면 HttpResponse는 아래와 같이 `header` 설정에 용이하다는 장점이 있다. 대신에 기본 `header`값은 `Content-Type: text/html; charset=utf-8` 로 되어있다. 
 ```python
 return HttpResponse("Text only, please.", content_type="text/plain")
 ```
+
 JsonResponse는 기본적으로 `header`가 `Content-Type: application/json` 로 설정되어 있다.
 
 ## 솔루션 1: HttpResponse
-
-``` python linenos
+``` python
 from django.core import serializers
 from django.http import HttpResponse
 
-def some_view(request):
-    qs = SomeModel.objects.all()
-    qs_json = serializers.serialize('json', qs)
-    return HttpResponse(qs_json, content_type='application/json')
+def view_name(request):
+    queryset = SomeModel.objects.all()
+    queryset_json = serializers.serialize('json', queryset)
+    return HttpResponse(queryset_json, content_type='application/json')
 ```
-
+Django에 내장되어있는 `serializers` 모듈을 사용하여 쿼리셋을 Json으로 `Serialize`한다. 그리고 위에서 언급했듯이 HttpResponse는 기본적으로 `content_type`이 `text/html;`로 설정되어 있기 때문에, `application/json`으로 설정해줘야한다.
