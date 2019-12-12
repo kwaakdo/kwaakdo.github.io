@@ -13,19 +13,23 @@ Json을 출력하는 방법에는 크게 두 가지가 있다. `HttpResponse`와
 ``` python 
 return JsonResponse({"key": "value"})
 ```
-단순하게 위와 같이 사용해도 출력이 된다. 굳이 쿼리셋을 Json 형식으로 [Serialize](https://ko.wikipedia.org/wiki/%EC%A7%81%EB%A0%AC%ED%99%94)하는 과정을 거치지 않아도 작동한다. 
+단순하게 위와 같이 사용해도 출력이 된다. 굳이 모델을 Json 형식으로 [Serialize](https://ko.wikipedia.org/wiki/%EC%A7%81%EB%A0%AC%ED%99%94)하는 과정을 거치지 않아도 작동한다. 
 
-반면 HttpResponse는 아래와 같이 `Content-Type`설정에 용이하다는 장점이 있다.
+반면 HttpResponse는 아래와 같이 `header` 설정에 용이하다는 장점이 있다.
 ```python
 return HttpResponse("Text only, please.", content_type="text/plain")
 ```
-
-
+JsonResponse는 기본적으로 `header`가 `Content-Type: application/json` 로 설정되어 있다.
 
 ## 솔루션 1: HttpResponse
 
-``` python
-values = PCT.objects.filter(code__startswith='a').values()
-return HttpResponse(json.dumps(values), content_type='application/json')
+``` python linenos
+from django.core import serializers
+from django.http import HttpResponse
+
+def some_view(request):
+    qs = SomeModel.objects.all()
+    qs_json = serializers.serialize('json', qs)
+    return HttpResponse(qs_json, content_type='application/json')
 ```
 
