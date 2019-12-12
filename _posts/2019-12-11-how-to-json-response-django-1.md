@@ -32,3 +32,5 @@ def view_name(request):
     return HttpResponse(queryset_json, content_type='application/json')
 ```
 Django에 내장되어있는 `serializers` 모듈을 사용하여 쿼리셋을 Json으로 `Serialize`한다. 그리고 위에서 언급했듯이 HttpResponse는 기본적으로 `content_type`이 `text/html;`로 설정되어 있기 때문에, `application/json`으로 설정해줘야한다.
+
+## 솔루션 2: JsonResponse
