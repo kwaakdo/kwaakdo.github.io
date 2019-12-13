@@ -13,7 +13,7 @@ Json을 출력하는 방법에는 크게 두 가지가 있다. `HttpResponse`와
 ``` python 
 return JsonResponse({"key": "value"})
 ```
-단순하게 위와 같이 사용해도 출력이 된다. 굳이 모델을 Json 형식으로 [Serialize](https://ko.wikipedia.org/wiki/%EC%A7%81%EB%A0%AC%ED%99%94)하는 과정을 거치지 않아도 작동한다. 
+단순하게 위와 같이 사용해도 출력이 된다. Dict타입을 넘겨주면 Json으로 Response해주는 방식이다.
 
 HttpResponse의 기본 `header`값은 `Content-Type: text/html; charset=utf-8` 로 되어있다. 아래와 같이 `content_type`을 설정해줄 수 있다.
 ```python
@@ -34,3 +34,18 @@ def view_name(request):
 Django에 내장되어있는 `serializers` 모듈을 사용하여 쿼리셋을 Json으로 `Serialize`한다. 그리고 위에서 언급했듯이 HttpResponse는 기본적으로 `content_type`이 `text/html;`로 설정되어 있기 때문에, `application/json`으로 설정해줘야한다.
 
 ## 솔루션 2: JsonResponse
+``` python
+from django.http import JsonResponse
+return JsonResponse({'foo':'bar'})
+```
+[JsonResponse](https://docs.djangoproject.com/en/dev/ref/request-response/#jsonresponse-objects)는 Dict타입의 데이터를 Json으로 응답해준다.
+
+``` python
+from django.http import JsonResponse
+
+def view_name(request):
+data = list(Model.objects.values())
+return JsonResponse(data, safe=False)
+```
+data = list(Model.objects.values())
+: Queryset은 Json으로 Serialize할 수 없기때문에 list타입으로 변환해준다.
