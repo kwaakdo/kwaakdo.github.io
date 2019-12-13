@@ -1,6 +1,6 @@
 ---
 title: Django 모델을 Json으로 출력하는 방법
-tags: Django Json Serialize
+tags: Django Python Website API
 ---
 [Django Restful Framework](https://www.django-rest-framework.org/)를 사용하는 경우가 아니라면 프론트엔드와 데이터를 주고 받기 위해 Json Response를 직접 구현하여야 한다. 대부분의 출력은 `Django 템플릿 언어(DTL)`와 `jinja2`를 활용하면 되지만, Javascript 와의 통신과 유동적 프로그래밍을 하기에는 부족하다고 생각한다. Javascript를 HTML 내부에 직접 태깅하여 하드코딩하는 방법도 있는데 아무래도 좋은 코드라 할 수 없다.
 
