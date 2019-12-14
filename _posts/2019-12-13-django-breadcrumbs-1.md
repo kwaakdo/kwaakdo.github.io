@@ -34,15 +34,18 @@ for i in reversed(range(0, checkpoint+1)):
 
 ### For문 두번째 루프
 ![image](https://user-images.githubusercontent.com/56034782/70847319-b0553500-1ea6-11ea-9344-88e6e16a4fe7.png)
+
+
 i의 값이 줄어들면서 점점 위쪽 게시글로 올라가는 모습이다.
 
 ### For문 세번째 루프
 ![image](https://user-images.githubusercontent.com/56034782/70847329-d084f400-1ea6-11ea-808a-bfb26831f2d2.png)
 
 ### For문 네번째 루프
-<img style="align: center;" src="https://user-images.githubusercontent.com/56034782/70847337-e7c3e180-1ea6-11ea-8c00-335266fed7f4.png">
+![image](https://user-images.githubusercontent.com/56034782/70847337-e7c3e180-1ea6-11ea-8c00-335266fed7f4.png)
+
 ### 코드 종료
-이런 식으로 위로 올라가며 계속 비교해가는 방식이다. Depth가 비교되고 참일경우에 계속 1씩 줄어드는데, 만약 상위 게시글과 Depth가 2정도 차이나면 location에 의도치않은 breadcrumbs가 들어가게 된다. 이 점은 보완하면 된다고 생각한다. 시간이 별로 없으므로 추후에 게시글 수정을 하겠다. 
+이런 식으로 위로 올라가며 계속 비교해가는 방식이다. Depth가 비교되고 참일경우에 계속 1씩 줄어드는데, 만약 상위 게시글과 Depth가 2정도 차이나면 location에 의도치않은 breadcrumbs가 들어가게 된다. Depth의 차이를 계산하는 과정을 추가하면 된다.
 
 ## 실제 코드
 <iframe
