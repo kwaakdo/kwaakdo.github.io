@@ -55,5 +55,5 @@ i의 값이 줄어들면서 점점 위쪽 게시글로 올라가는 모습이다
 </iframe>
 
 
-![image](https://user-images.githubusercontent.com/56034782/70847410-789abd00-1ea7-11ea-88b1-4996117fd42f.png)
+[draw.io 활용](https://user-images.githubusercontent.com/56034782/70847410-789abd00-1ea7-11ea-88b1-4996117fd42f.png)
 
