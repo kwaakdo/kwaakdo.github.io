@@ -4,7 +4,7 @@ tags: Django Python Website Algorithm
 ---
 ![image](https://www.highervisibility.com/wp-content/uploads/2019/06/target-breadcrumbs.png)
 
-이번 포스트에서는 위와 같은 Breadcrumbs를 구현하는 방법에 대해 다루겠다.
+이번 포스트에서는 위와 같은 Breadcrumbs를 구현하는 방법에 대해 다루겠다. `views.py`를 중점으로 서술할 예정이다.
 <!--more-->
 # Breadcrumbs 란?
 브래드크럼은 핸젤과 그레텔에서 따온 용어(빵부스러기)이다. 겉보기에는 간단해보이지만 알고리즘은 생각보다는 복잡하다. 내가 직접 구현했었던 코드는 제일 하단에 있다.
@@ -19,7 +19,7 @@ tags: Django Python Website Algorithm
 1. locations = [] 으로 list형 변수를 선언해줘야 한다. breadcrumbs를 기록하는 역할을 할 것이다. 
 2. point_depth = document.depth 으로 현재 접속한 게시글의 depth를 변수에 저장해줘야한다. 
 
-### 코드 작성
+## 코드 작성
 ```python
 for i in reversed(range(0, checkpoint+1)):
         if documents[i].depth < point_depth:
@@ -47,7 +47,7 @@ i의 값이 줄어들면서 점점 위쪽 게시글로 올라가는 모습이다
 ### For문 네번째 루프
 ![image](https://user-images.githubusercontent.com/56034782/70847337-e7c3e180-1ea6-11ea-8c00-335266fed7f4.png)
 
-### 코드 종료
+## 코드 종료
 이런 식으로 위로 올라가며 계속 비교해가는 방식이다. Depth가 비교되고 참일경우에 계속 1씩 줄어드는데, 만약 상위 게시글과 Depth가 2정도 차이나면 location에 의도치않은 breadcrumbs가 들어가게 된다. Depth의 차이를 계산하는 과정을 추가하면 된다.
 
 ## 실제 코드
