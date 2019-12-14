@@ -12,6 +12,7 @@ tags: Django Python Website Algorithm
 ## 어떻게 구현하는가?
 ### 가정
 :![image](https://user-images.githubusercontent.com/56034782/70847195-ed202c80-1ea4-11ea-99eb-749d3212f027.png)
+
 이해를 돕기 위해 좌측과 같은 구조의 Document들이 있다고 가정하겠다. 게시글6이 몇번째에 위치해 있는지 Checkpoint에 저장한 것이다. Depth는 게시글의 깊이를 표현한다. 블로그를 예로 들자면 메뉴안의 메뉴 같은 개념이다.
 
 ### 변수 선언
@@ -32,6 +33,8 @@ for i in reversed(range(0, checkpoint+1)):
 ### For문 첫번째 루프
 ![image](https://user-images.githubusercontent.com/56034782/70847308-86037780-1ea6-11ea-917f-3043531bf601.png)
 
+
+플로우차트에서 곡선 화살표가 게시글6에서 시작하는데, 잘못되었다. 게시글6과는 상관없이 i번째 게시글의 Depth와 point_depth를 비교하는 것이다. 
 ### For문 두번째 루프
 ![image](https://user-images.githubusercontent.com/56034782/70847319-b0553500-1ea6-11ea-9344-88e6e16a4fe7.png)
 
@@ -50,10 +53,10 @@ i의 값이 줄어들면서 점점 위쪽 게시글로 올라가는 모습이다
 ## 실제 코드
 <iframe
   src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=def%2520document(request%252C%2520id)%253A%250A%2520%2520%2520%2520id_integer%2520%253D%2520int(id)%250A%2520%2520%2520%2520document%2520%253D%2520Document.objects.get(document_id%2520%253D%2520id_integer)%250A%2520%2520%2520%2520book_id_integer%2520%253D%2520int(Document.objects.get(document_id%2520%253D%2520id_integer).book.book_id)%250A%2520%2520%2520%2520book_detail%2520%253D%2520Book.objects.get(book_id%2520%253D%2520book_id_integer)%250A%2520%2520%2520%2520documents%2520%253D%2520book_detail.document_set.all()%250A%250A%2520%2520%2520%2520for%2520i%2520in%2520range(0%252C%2520documents.count())%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520document.document_id%2520%253D%253D%2520documents%255Bi%255D.document_id%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520checkpoint%2520%253D%2520i%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520break%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520locations%2520%253D%2520%255B%255D%250A%2520%2520%2520%2520point_depth%2520%253D%2520document.depth%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520for%2520i%2520in%2520reversed(range(0%252C%2520checkpoint%252B1))%253A%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520documents%255Bi%255D.depth%2520%253C%2520point_depth%253A%250A%2509%2509%2509locations.append(documents%255Bi%255D)%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520point_depth%2520-%253D%25201%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520point_depth%2520%253D%253D%25200%253A%250A%2509%2509break%250A%250A%250A%2520%2520%2520%2520return%2520render(request%252C%2520'post%252Fdocument.html'%252C%2520%257B'document'%253A%2520document%252C'book_detail'%253A%2520book_detail%252C'documents'%253A%2520documents%252C'locations'%2520%253A%2520reversed(locations)%252C%257D)"
-  style="width:100%; height:473px; border:0; overflow:hidden;"
+  style="width:100%; height:700px; border:0; overflow:hidden;"
   sandbox="allow-scripts allow-same-origin">
 </iframe>
 
 
-[draw.io 활용](https://user-images.githubusercontent.com/56034782/70847410-789abd00-1ea7-11ea-88b1-4996117fd42f.png)
+[전체 플로우차트 보기](https://user-images.githubusercontent.com/56034782/70847410-789abd00-1ea7-11ea-88b1-4996117fd42f.png)
 
