@@ -7,9 +7,72 @@ tags: Django Python Website Algorithm
 이번 포스트에서는 위와 같은 Breadcrumbs를 구현하는 방법에 대해 다루겠다.
 <!--more-->
 # Breadcrumbs 란?
-브래드크럼은 핸젤과 그레텔에서 따온 용어(빵부스러기)이다. 겉보기에는 간다해보이지만 알고리즘은 생각보다는 복잡하다.
+브래드크럼은 핸젤과 그레텔에서 따온 용어(빵부스러기)이다. 겉보기에는 간단해보이지만 알고리즘은 생각보다는 복잡하다. 내가 직접 구현했었던 코드는 제일 하단에 있다.
 
 ## 어떻게 구현하는가?
-![image](https://user-images.githubusercontent.com/56034782/70847195-ed202c80-1ea4-11ea-99eb-749d3212f027.png)
-이해를 돕기 위해 위와 같은 Document들이 있다고 가정하겠다.
+### 가정
+:![image](https://user-images.githubusercontent.com/56034782/70847195-ed202c80-1ea4-11ea-99eb-749d3212f027.png)
+이해를 돕기 위해 좌측과 같은 구조의 Document들이 있다고 가정하겠다. 게시글6이 몇번째에 위치해 있는지 Checkpoint에 저장한 것이다. Depth는 게시글의 깊이를 표현한다. 블로그를 예로 들자면 메뉴안의 메뉴 같은 개념이다.
+
+### 변수 선언
+1. locations = [] 으로 list형 변수를 선언해줘야 한다. breadcrumbs를 기록하는 역할을 할 것이다. 
+2. point_depth = document.depth 으로 현재 접속한 게시글의 depth를 변수에 저장해줘야한다. 
+
+### 코드 작성
+```python
+for i in reversed(range(0, checkpoint+1)):
+        if documents[i].depth < point_depth:
+            locations.append(documents[i])
+            point_depth -= 1
+        if point_depth == 0:
+            break
+```
+위 코드를 통해서 점점 위쪽으로 탐색하는 작업을 반복한다. point_depth가 0이 되면 종료되는 반복문이다. 참고로 i 는 point_depth를 비교할 대상이 되는 document번호라고 생각하면 된다. 
+
+#### For문 첫번째 루프
+![image](https://user-images.githubusercontent.com/56034782/70847308-86037780-1ea6-11ea-917f-3043531bf601.png)
+
+#### For문 두번째 루프
+![image](https://user-images.githubusercontent.com/56034782/70847319-b0553500-1ea6-11ea-9344-88e6e16a4fe7.png)
+i의 값이 줄어들면서 점점 위쪽 게시글로 올라가는 모습이다.
+
+#### For문 세번째 루프
+![image](https://user-images.githubusercontent.com/56034782/70847329-d084f400-1ea6-11ea-808a-bfb26831f2d2.png)
+
+#### For문 네번째 루프
+![image](https://user-images.githubusercontent.com/56034782/70847337-e7c3e180-1ea6-11ea-8c00-335266fed7f4.png)
+
+#### 코드 종료
+이런 식으로 위로 올라가며 계속 비교해가는 방식이다. Depth가 비교되고 참일경우에 계속 1씩 줄어드는데, 만약 상위 게시글과 Depth가 2정도 차이나면 location에 의도치않은 breadcrumbs가 들어가게 된다. 이 점은 보완하면 된다고 생각한다. 시간이 별로 없으므로 추후에 게시글 수정을 하겠다. 
+
+# 실제 코드
+```python
+def document(request, id):
+    id_integer = int(id)
+    document = Document.objects.get(document_id = id_integer)
+    book_id_integer = int(Document.objects.get(document_id = id_integer).book.book_id)
+    book_detail = Book.objects.get(book_id = book_id_integer)
+    documents = book_detail.document_set.all()
+
+    for i in range(0, documents.count()):
+        if document.document_id == documents[i].document_id:
+            checkpoint = i
+            break
+    
+    locations = []
+    point_depth = document.depth
+    
+    for i in reversed(range(0, checkpoint+1)):
+        if documents[i].depth < point_depth:
+			locations.append(documents[i])
+            point_depth -= 1
+        if point_depth == 0:
+		break
+
+
+    return render(request, 'post/document.html', {'document': document,'book_detail': book_detail,'documents': documents,'locations' : reversed(locations),})
+```
+
+
+
 
