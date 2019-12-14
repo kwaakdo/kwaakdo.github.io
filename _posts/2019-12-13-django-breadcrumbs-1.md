@@ -48,7 +48,7 @@ i의 값이 줄어들면서 점점 위쪽 게시글로 올라가는 모습이다
 ![image](https://user-images.githubusercontent.com/56034782/70847337-e7c3e180-1ea6-11ea-8c00-335266fed7f4.png)
 
 ## 코드 종료
-이런 식으로 위로 올라가며 계속 비교해가는 방식이다. Depth가 비교되고 참일경우에 계속 1씩 줄어드는데, 만약 상위 게시글과 Depth가 2정도 차이나면 location에 의도치않은 breadcrumbs가 들어가게 된다. Depth의 차이를 계산하는 과정을 추가하면 된다.
+이런 식으로 위로 올라가며 계속 비교해가는 방식이다. Depth가 비교되고 참일경우에 계속 1씩 줄어드는데, 만약 상위 게시글과 Depth가 2정도 차이나면 location에 의도치않은 breadcrumbs가 들어가게 된다. Depth의 차이를 계산하는 과정을 추가하면 된다. 이제 `locations`를 HTML로 넘겨주고 렌더링하기만 하면 된다. HTML관련된 부분은 이 글에서 따로 작성하지 않도록 하겠다.
 
 ## 실제 코드
 <iframe
