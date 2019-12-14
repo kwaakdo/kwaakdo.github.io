@@ -2,9 +2,14 @@
 title: Django에서 Breadcrumbs 직접 구현하기
 tags: Django Python Website Algorithm
 ---
-![image](https://user-images.githubusercontent.com/56034782/70805512-69ab0080-1dfc-11ea-8958-13629c345292.png) 좌측 메뉴와 상단의 Breadcrumbs가 일치하는 것을 볼 수 있다.
-![image](https://user-images.githubusercontent.com/56034782/70805153-a0344b80-1dfb-11ea-902e-2c6a04b88068.png)
-이 포스트에서는 Django View에서 어떤방식으로 Breadcrumbs를 구현하는지 다루겠다.
+![image](https://www.highervisibility.com/wp-content/uploads/2019/06/target-breadcrumbs.png)
+
+이번 포스트에서는 위와 같은 Breadcrumbs를 구현하는 방법에 대해 다루겠다.
 <!--more-->
 # Breadcrumbs 란?
-브래드크럼은 핸젤과 그레텔에서 따온 용어(빵부스러기)로 사용자가 어떻게 이곳에 위치하게 되었는지에 대한 정보를 나타낸다. 
+브래드크럼은 핸젤과 그레텔에서 따온 용어(빵부스러기)이다. 겉보기에는 간다해보이지만 알고리즘은 생각보다는 복잡하다.
+
+## 어떻게 구현하는가?
+![image](https://user-images.githubusercontent.com/56034782/70847195-ed202c80-1ea4-11ea-99eb-749d3212f027.png)
+이해를 돕기 위해 위와 같은 Document들이 있다고 가정하겠다.
+
