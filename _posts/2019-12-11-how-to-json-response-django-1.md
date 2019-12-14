@@ -50,5 +50,5 @@ return JsonResponse(data, safe=False)
 data = list(Model.objects.values())
 : Queryset은 Json으로 Serialize할 수 없기때문에 list타입으로 변환해준다.
 
-# 마치며.
+## 마치며.
 프로젝트를 진행하면서 필요했던 것들에 대한 포스팅을 하는 중이다. 메모가 주 기능이라 생각하지만 다른 개발자들이 좀 더 빠르게 원하는 정보를 얻게 하려는 의도도 있다. Stack Overflow나 외국 문서들을 찾아보는 것은 시간이 많이 소요될 수 있기 때문이다.
