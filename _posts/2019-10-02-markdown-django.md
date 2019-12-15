@@ -13,7 +13,7 @@ tags: Django Python Website Markdown
 ---
 
 # markdown_deux
-`markdown_deux`는 [python_markdown2](https://github.com/trentm/python-markdown2)을 기반으로 한다. 
+`markdown_deux`는 [python_markdown2](https://github.com/trentm/python-markdown2)을 기반으로 한다. Markdown으로 이루어진 Text를 HTML로 렌더링할때 사용한다. 
 ## 1) 설치
 pypi로 최신버전을 설치한다.
 ```
@@ -100,13 +100,10 @@ MARKDOWN_DEUX_STYLES = {
 ```
 
 ---
-
+# simpleMDE
 마크다운 에디터는 [simpleMDE](https://github.com/sparksuite/simplemde-markdown-editor)를 추천한다. 위지윅([WYSIWYG](https://ko.wikipedia.org/wiki/%EC%9C%84%EC%A7%80%EC%9C%84%EA%B7%B8)) 방식을 채택하여 사용자 입장에서 편리하다.
 ![image](https://camo.githubusercontent.com/dd1a40dd1efd202fd3862995b3ecc699282ee540/687474703a2f2f692e696d6775722e636f6d2f7a7157664a774f2e706e67) 
-마크다운을 입력하는 즉시 스타일이 적용되서, 직관적이다.
-
-# simpleMDE
-설치 방법에는 여러가지가 있다.
+마크다운을 입력하는 즉시 스타일이 적용되서, 직관적이다. 설치 방법에는 여러가지가 있다.
 
 ## 1) 설치
 ### npm
