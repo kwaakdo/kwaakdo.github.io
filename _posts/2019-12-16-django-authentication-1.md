@@ -5,7 +5,7 @@ tags: Django Ptyhon Website
 ## 개요
 어떤 웹 사이트를 개발하던 로그인 기능은 거의 필수적이라고 할 수 있다. `Django`에 내장되어있는 인증 시스템은 로그인, 로그아웃부터 비밀번호 변경까지 간편하게 사용할 수 있다. 인증 시스템은 만들어져있지만 템플릿(Templates)는 직접 구현하여야 한다.
 
-- 이 포스트는 [mozilla](https://developer.mozilla.org/ko/docs/Learn/Server-side/Django/Authentication)의 자료를 바탕으로 만들어졌습니다.
+- 이 포스트는 [mozilla](https://developer.mozilla.org/ko/docs/Learn/Server-side/Django/Authentication)의 자료를 바탕으로 만들어졌다.
 <!--more-->
 # Django Authentication
 ## URL Pattern
@@ -43,9 +43,42 @@ TEMPLATES = [
 ```
 
 ### Login Template
-> 이 글에 나오는 템플릿은 기본적인 기능만 하는 템플릿이므로 커스터마이징을 해야 합니다.
+> 이 글에 나오는 템플릿은 기본적인 기능만 하므로 커스터마이징을 해야 합니다.
+> login.html 을 작성하기 이전에 *Project/templates/base_generic.html*을 만들어야합니다.
+*Project/templates/base_generic.html*
+```html linenos
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Local Library</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+        <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="">All books</a></li>
+          <li><a href="">All authors</a></li>
+        </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
 *Project/templates/registration/login.html*
-```html
+```html linenos
 {% extends "base_generic.html" %}
 
 {% block content %}
