@@ -45,6 +45,7 @@ TEMPLATES = [
 ### Login Template
 > 이 글에 나오는 템플릿은 기본적인 기능만 하므로 커스터마이징을 해야 합니다.
 > login.html 을 작성하기 이전에 *Project/templates/base_generic.html*을 만들어야합니다.
+
 *Project/templates/base_generic.html*
 ```html linenos
 <!DOCTYPE html>
