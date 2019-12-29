@@ -1,6 +1,7 @@
 ---
 title: Django 인증(Authentication)시스템 사용하기
 tags: Django Ptyhon Website
+published: false
 ---
 ## 개요
 어떤 웹 사이트를 개발하던 로그인 기능은 거의 필수적이라고 할 수 있다. `Django`에 내장되어있는 인증 시스템은 로그인, 로그아웃부터 비밀번호 변경까지 간편하게 사용할 수 있다. 인증 시스템은 만들어져있지만 템플릿(Templates)는 직접 구현하여야 한다.
