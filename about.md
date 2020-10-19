@@ -17,6 +17,6 @@ titles:
   ko-KR   : *KO
 key: page-about
 ---
-![chess](https://user-images.githubusercontent.com/56034782/96338687-d3560400-10ca-11eb-9e1c-9604e1680566.png) Rating : 1000~1100
+![chess](https://user-images.githubusercontent.com/56034782/96338687-d3560400-10ca-11eb-9e1c-9604e1680566.png){: width="100" height="100"} Rating : 1000~1100
 
-![piano](https://user-images.githubusercontent.com/56034782/96338806-7b6bcd00-10cb-11eb-9c9b-85bbffa059ca.png) For a 4 Years
+![piano](https://user-images.githubusercontent.com/56034782/96338806-7b6bcd00-10cb-11eb-9c9b-85bbffa059ca.png){: width="100" height="100"} For a 4 Years
